@@ -1,4 +1,3 @@
-<!--Start-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="eye-style.css">
-    <title>Document</title>
+    <title>¿Quieres ser mi San Valentín?</title>
 </head>
 
 <body>
@@ -18,23 +17,77 @@
             </div>
             <div class="eye">
                 <div class="ball"></div>
-                <iv>
             </div>
         </div>
-        <script>
-            var ball = document.getElementsByClassName("ball");
-            document.onmousemove = function() {
-                var x = event.clientX * 100 / window.innerWidth + "%";
-                var y = event.clientY * 70 / window.innerHeight + "%";
-
-                for (var i = 0; i < 2; i++) {
-                    ball[i].style.left = x / 2;
-                    ball[i].style.top = y / 2;
-                    ball[i].style.transform = "translate(" + x + "," + y + ")";
-                }
-            }
-        </script>
     </div>
+
+    <!-- Mensaje y botones -->
+    <div class="message">
+        <h2>¿Quieres ser mi San Valentín, gordita? ❤️</h2>
+        <div class="buttons">
+            <button id="yes-btn">Sí</button>
+            <button id="no-btn">No</button>
+        </div>
+    </div>
+
+    <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 80%; animation-delay: 4s;"></div>
+
+
+    <script>
+        // Movimiento de los ojos
+        var ball = document.getElementsByClassName("ball");
+        document.onmousemove = function(event) {
+            var x = event.clientX * 100 / window.innerWidth + "%";
+            var y = event.clientY * 70 / window.innerHeight + "%";
+
+            for (var i = 0; i < 2; i++) {
+                ball[i].style.transform = "translate(" + x + "," + y + ")";
+            }
+        }
+
+        // Mobile
+        document.addEventListener('touchmove', function(event) {
+            var touch = event.touches[0];
+            var x = touch.clientX * 100 / window.innerWidth + "%";
+            var y = touch.clientY * 70 / window.innerHeight + "%";
+
+            for (var i = 0; i < 2; i++) {
+                ball[i].style.transform = "translate(" + x + "," + y + ")";
+            }
+        });
+
+
+        // Efecto del botón "No"
+        const noBtn = document.getElementById('no-btn');
+
+        noBtn.addEventListener('mouseover', function () {
+            const randomX = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+        });
+
+        noBtn.addEventListener('touchmove', function () {
+            const randomX = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+        });
+
+        // Acción al hacer clic en "Sí"
+        const yesBtn = document.getElementById('yes-btn');
+        // yesBtn.addEventListener('click', function () {
+        //     alert('¡Sabía que dirías que sí, amorcito! 💖');
+        // });
+        yesBtn.addEventListener('click', function () {
+            window.location.href = 'thankyou.html';
+        });
+
+    </script>
 </body>
 
 </html>
