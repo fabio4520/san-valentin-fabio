@@ -16,7 +16,8 @@ body {
 }
 
 .body {
-  background: url("Minions-body.png") no-repeat center;
+  /* background: url("Minions-body.png") no-repeat center; */
+  background: url("Minions-body.webp") no-repeat center;
   background-size: cover;
   width: 348px;
   height: 553.7px;
@@ -39,7 +40,8 @@ body {
 }
 
 .ball {
-  background: url("minion-eye.png") no-repeat center;
+  /* background: url("minion-eye.png") no-repeat center; */
+  background: url("minion-eye.webp") no-repeat center;
   background-size: cover;
   width: 42.3px;
   height: 42.3px;

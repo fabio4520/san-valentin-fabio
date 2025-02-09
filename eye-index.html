@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="eye-style.css">
+    <!-- <link rel="stylesheet" href="eye-style.css" media="print" onload="this.media='all'"> -->
+    <!-- <script src="eye-script.js" defer></script>     -->
     <title>¿Quieres ser mi San Valentín?</title>
 </head>
 
@@ -80,9 +82,6 @@
 
         // Acción al hacer clic en "Sí"
         const yesBtn = document.getElementById('yes-btn');
-        // yesBtn.addEventListener('click', function () {
-        //     alert('¡Sabía que dirías que sí, amorcito! 💖');
-        // });
         yesBtn.addEventListener('click', function () {
             window.location.href = 'thankyou.html';
         });
