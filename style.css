@@ -66,8 +66,8 @@ button:hover {
   position: absolute;
   width: 30px;
   height: 30px;
-  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/1024px-Love_Heart_SVG.svg.png")
-    no-repeat center;
+  /* content:  "❤️"; */
+  background: url("red-heart.png") no-repeat center;
   background-size: cover;
   animation: float 5s infinite ease-in-out;
 }
